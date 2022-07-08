@@ -1,0 +1,790 @@
+<!DOCTYPE html lang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<head>
+</head>
+<style>
+
+
+        body {
+                background-color: #f1f2f6;
+                background-image: linear-gradient(#e5e4e2 0%, #f4f0ec 25%, #e5e4e2 50%, #e5e3e2 75%, #e5e4e2 100%);
+                text-align: center;
+                padding: 2vmax;
+                font-family: 'Courier New', Courier, monospace;
+        }
+
+        h1 {
+                text-align: center;
+
+        }
+
+        .topbut {
+                width: 40vw;
+                height: 7.5vh;
+                font-variant-caps: small-caps;
+                border-radius: 5%;
+        }
+
+        .topbut:hover {
+                width: 41vw;
+                height: 7.6vh;
+        }
+
+        .topbut:focus {
+                width: 42vw;
+                height: 7.7vh;
+        }
+
+        #englishfirst {
+                display: none;
+        }
+
+        #englishfirst h2 {
+                color: darkred;
+        }
+
+        #englishfirst h3 {
+                color: 1c0000;
+        }
+
+        #englishfirst span {
+                color: darkblue;
+                font-weight: bolder;
+                background-color: 66D3FA;
+        }
+
+        #englishfirst label {
+                color: darkred;
+        }
+
+
+        #metricfirst {
+                display: none;
+        }
+
+        #metricfirst h2 {
+                color: darkblue;
+        }
+
+        #metricfirst h3 {
+                color: 000207;
+        }
+
+        #metricfirst span {
+                color: darkred;
+                font-weight: bolder;
+                background-color: pink;
+        }
+
+        #metricfirst label {
+                color: darkblue;
+        }
+
+        #conetom {
+                background-color: crimson;
+                color: white;
+        }
+
+        #conetom:hover {
+                font-weight: bolder;
+        }
+
+        #conetom:focus {
+                font-weight: bolder;
+        }
+
+        #conmtoe {
+                background-color: 0F5298;
+                color: white;
+        }
+
+        #conmtoe:hover {
+                font-weight: bolder;
+        }
+
+        #conmtoe:focus {
+                font-weight: bolder;
+        }
+
+        .sidebut {
+                width: 15.5vw;
+                height: 5vh;
+                font-variant-caps: small-caps;
+                border: solid white 2px;
+                border-radius: 10%;
+        }
+
+        #sidebuttons1 .sidebut {
+                background-color: lightcoral;
+                color: darkred;
+        }
+
+        #sidebuttons1 .sidebut:hover {
+                background-color: crimson;
+                color: white;
+                font-weight: bold;
+        }
+
+        #sidebuttons1 .sidebut:focus {
+                background-color: crimson;
+                color: white;
+                font-weight: bold;
+        }
+
+        #sidebuttons2 .sidebut {
+                background-color: 66D3FA;
+                color: darkblue;
+        }
+
+        #sidebuttons2 .sidebut:hover {
+                background-color: 0F5298;
+                color: white;
+                font-weight: bold;
+        }
+
+        #sidebuttons2 .sidebut:focus span {
+                font-weight: bolder;
+                font-size-adjust: 1.5em;
+        }
+
+        #innerenglishfirst,
+        #innermetricfirst {
+                        padding-left: 8vw;
+                        padding-right: 8vw;
+                }
+
+        footer {
+                margin-top: 5%;
+                display: block;
+                bottom: 5%;
+                font-style: italic;
+        }
+
+        @media screen and (max-width: 400px) {
+                .topbut {
+                        width: 80vw;
+                        height: 9vh;
+                        margin-bottom: 2vh;
+                }
+
+                .topbut:hover,
+                .topbut:focus {
+                        width: 82vw;
+                        height: 9.5vh;
+                        margin-bottom: 2vh;
+                }
+
+                .sidebut,
+                .sidebut:hover,
+                .sidebut:focus {
+                        width: 30vw;
+                        height: 6vh;
+                        margin-bottom: 2vh;
+                }
+
+                #innerenglishfirst,
+                #innermetricfirst {
+                        padding-left: 10vw;
+                        padding-right: 10vw;
+                }
+        }
+
+        @media screen and (max-width: 360px) {
+                .topbut {
+                        width: 80vw;
+                        height: 9vh;
+                        margin-bottom: 2vh;
+                }
+
+                .topbut:hover,
+                .topbut:focus {
+                        width: 82vw;
+                        height: 9.5vh;
+                        margin-bottom: 2vh;
+                }
+
+                .sidebut,
+                .sidebut:hover,
+                .sidebut:focus {
+                        width: 40vw;
+                        height: 6vh;
+                        margin-bottom: 2vh;
+                }
+
+                #innerenglishfirst,
+                #innermetricfirst {
+                        padding-left: 10vw;
+                        padding-right: 10vw;
+                }
+        }
+
+        @media screen and (min-width: 768px) {
+                .topbut {
+                        width: 30vw;
+                        height: 7.5vh;}
+
+                .topbut:hover, 
+                .topbut:focus {
+                        width: 32vw; 
+                        height: 7.6vh;
+                }
+
+                .sidebut {
+                        width: 12vw; 
+                        height: 5vw;}
+
+        }
+</style>
+
+<body>
+        <h1>English and Metric Converter</h1>
+
+        <div id="topbuttons">
+                <button type="button" class="topbut" id="conetom">Convert English to Metric</button>
+                <button type="button" class="topbut" id="conmtoe">Convert Metric to English</button>
+        </div>
+
+        <section id="englishfirst">
+                <h2>Let's convert English Units to Metric!</h2>
+                        <div id="sidebuttons1">
+                                <button type="button" class="sidebut" id="temp1">Temp</button>
+                                <button type="button" class="sidebut" id="area1">Area</button>
+                                <button type="button" class="sidebut" id="length1">Length</button>
+                                <button type="button" class="sidebut" id="weight1">Weight</button>
+                                <button type="button" class="sidebut" id="volume1">Volume</button>
+                        </div>
+                        <div id="innerenglishfirst">
+                                <section id="temp1code">
+                                        <h3>Farenheit to Celcius</h3>
+                                        <p>Type a temperature in the Fahrenheit field to convert it to Celsius:</p>
+                                        <p>
+                                                <label>Fahrenheit</label>
+                                                <input id="inputFahrenheit" type="number"
+                                                        oninput="temperatureConverter1(this.value)">
+                                        </p>
+                                        <p>Your temperature in Celsius is: <span id="outputCelcius"></span></p>
+
+                                        <script>
+                                                // This script converts temp from F to C.
+                                                function temperatureConverter1(valNum) {
+                                                        valNum = parseFloat(valNum - 32) / 1.8;
+                                                        document.getElementById("outputCelcius").innerHTML = (valNum).toFixed(1);
+                                                }
+                                        </script>
+                                </section>
+
+                                <section id="area1code">
+                                
+                                                <h3>Square Feet to Square Meters</h3>
+                                                <p>Calculate how many square meters are in a given number of square
+                                                        feet:</p>
+                                                <p>
+                                                        <label>Square Feet</label>
+                                                        <input id="inputsquarefeet" type="number"
+                                                                oninput="area1Converter1(this.value)">
+                                                </p>
+                                                <p>The total number of square meters is: <span
+                                                                id="outputsquaremet"></span></p>
+
+                                                <script>
+                                                        // This script converts square feet into square meters.
+                                                        function area1Converter1(valNum) {
+                                                                valNum = parseFloat(valNum * 0.092903);
+                                                                document.getElementById("outputsquaremet").innerHTML = (valNum).toFixed(2);
+                                                        }
+                                                </script>
+                                        
+
+                                        
+                                                <h3>Square Miles to Square Kilometers</h3>
+                                                <p>Calculate how many square kilometers are in a given number of square
+                                                        miles:</p>
+                                                <p>
+                                                        <label>Square Miles</label>
+                                                        <input id="inputsquaremiles" type="number"
+                                                                oninput="area1Converter2(this.value)">
+                                                </p>
+                                                <p>The total number of square kilometers is: <span
+                                                                id="outputsquarekms"></span></p>
+
+                                                <script>
+                                                        // This script converts square miles into square kilometers.
+                                                        function area1Converter2(valNum) {
+                                                                valNum = parseFloat(valNum * 2.58999);
+                                                                document.getElementById("outputsquarekms").innerHTML = (valNum).toFixed(2);
+                                                        }
+                                                </script>
+                                       
+                                                <h3>Acres to Hectares</h3>
+                                                <p>Calculate how many hectares are in a given number of acres:</p>
+                                                <p>
+                                                        <label>Acres</label>
+                                                        <input id="inputacres" type="number"
+                                                                oninput="area1Converter3(this.value)">
+                                                </p>
+                                                <p>The total number of hectares is: <span id="outputhectares"></span>
+                                                </p>
+
+                                                <script>
+                                                        // This script converts acres into hectares.
+                                                        function area1Converter3(valNum) {
+                                                                valNum = parseFloat(valNum * 0.404686);
+                                                                document.getElementById("outputhectares").innerHTML = (valNum).toFixed(2);
+                                                        }
+                                                </script>
+                                        
+                                </section>
+
+                                <section id="length1code">
+                                        <h3>Inches to Centimeters</h3>
+                                                 <p>Calculate how many centimeters are in a given number of inches:</p>
+                                                <p>
+                                                        <label>Inches</label>
+                                                        <input id="inputinch" type="number" oninput="length1Converter1(this.value)">
+                                                </p>
+                                                <p>The total number of centimeters is: <span id="outputcm"></span></p>
+
+                                                <script>
+                                                        // This script converts inches to centimeters.
+                                                        function length1Converter1(valNum) {
+                                                                valNum = parseFloat(valNum * 2.54);
+                                                                document.getElementById("outputcm").innerHTML = (valNum).toFixed(2);
+                                                        }
+                                                </script>
+
+
+                                                <h3>Feet to Meters</h3>
+                                                <p>Calculate how many meters are in a given number of feet:</p>
+                                                <p>
+                                                        <label>Feet</label>
+                                                        <input id="inputfeet" type="number" oninput="length1Converter2(this.value)">
+                                                </p>
+                                                <p>The total number of meters is: <span id="outputmeters"></span></p>
+
+                                                <script>
+                                                        // This script converts feet in meters.
+                                                        function length1Converter2(valNum) {
+                                                                valNum = parseFloat(valNum * 0.3048);
+                                                                document.getElementById("outputmeters").innerHTML = (valNum).toFixed(2);
+                                                        }
+                                                </script>
+
+
+                                                <h3>Miles to Kilometers</h3>
+                                                <p>Calculate how many kilometers are in a given number of miles:</p>
+                                                <p>
+                                                        <label>Miles</label>
+                                                        <input id="inputmiles" type="number" oninput="length1Converter3(this.value)">
+                                                </p>
+                                                <p>The total number of kilometers is: <span id="outputkilometers"></span></p>
+
+                                                <script>
+                                                        // This script converts grams into ounces.
+                                                        function length1Converter3(valNum) {
+                                                                valNum = parseFloat(valNum * 1.60934);
+                                                                document.getElementById("outputkilometers").innerHTML = (valNum).toFixed(2);
+                                                        }
+                                                </script>
+                                </section>
+                                <section id="weight1code">
+                                        <h3>Ounces to Grams</h3>
+                                        <p>Calculate how many grams are in a given number of ounces:</p>
+                                        <p>
+                                                <label>Ounces</label>
+                                                <input id="inputounces" type="number" oninput="weight1Converter1(this.value)">
+                                        </p>
+                                        <p>The total number of grams is: <span id="outputgrams"></span></p>
+
+                                        <script>
+                                                // This script converts ounces into grams.
+                                                function weight1Converter1(valNum) {
+                                                        valNum = parseFloat(valNum * 28.3495);
+                                                        document.getElementById("outputgrams").innerHTML = (valNum).toFixed(2);
+                                                }
+                                        </script>
+
+                                        <h3>Pounds to Kilograms</h3>
+                                        <p>Calculate how many kilograms are in a given number of pounds:</p>
+                                        <p>
+                                                <label>Pounds</label>
+                                                <input id="inputpounds" type="number" oninput="weight1Converter2(this.value)">
+                                        </p>
+                                        <p>The total number of kilograms is: <span id="outputkilograms"></span></p>
+
+                                        <script>
+                                                // This script converts pounds into kilograms.
+                                                function weight1Converter2(valNum) {
+                                                        valNum = parseFloat(valNum * 0.404686);
+                                                        document.getElementById("outputkilograms").innerHTML = (valNum).toFixed(2);
+                                                }
+                                        </script>
+
+                                </section>
+
+                                <section id="volume1code">
+                                        <h3>Fluid Ounces to Milliliters</h3>
+                                        <p>Calculate how many milliliters are in a given number of fluid ounces:</p>
+                                        <p>
+                                                <label>Fluid Ounces</label>
+                                                <input id="inputfloz" type="number" oninput="volume1Converter1(this.value)">
+                                        </p>
+                                        <p>The total number of milliliters is: <span id="outputmls"></span></p>
+
+                                        <script>
+                                                // This script converts fluid ounces into milliliters.
+                                                function volume1Converter1(valNum) {
+                                                        valNum = parseFloat(valNum * 29.5735);
+                                                        document.getElementById("outputmls").innerHTML = (valNum).toFixed(0);
+                                                }
+                                        </script>
+
+                                        <h3>Gallons to Liters</h3>
+                                        <p>Calculate how many liters are in a given number of gallons:</p>
+                                        <p>
+                                                <label>Gallons</label>
+                                                <input id="inputgallons" type="number" oninput="volume1Converter2(this.value)">
+                                        </p>
+                                        <p>The total number of liters is: <span id="outputliters"></span></p>
+
+                                        <script>
+                                                // This script converts gallons into liters.
+                                                function volume1Converter2(valNum) {
+                                                        valNum = parseFloat(valNum * 3.78541);
+                                                        document.getElementById("outputliters").innerHTML = (valNum).toFixed(3);
+                                                }
+                                        </script>
+                                </section>
+                        </div>
+        </section>
+
+
+
+        <section id="metricfirst">
+                <h2>Let's convert Metric Units to English!</h1>
+                        <div id="sidebuttons2">
+                                <button type="button" class="sidebut" id="temp2">Temp</button>
+                                <button type="button" class="sidebut" id="area2">Area</button>
+                                <button type="button" class="sidebut" id="length2">Length</button>
+                                <button type="button" class="sidebut" id="weight2">Weight</button>
+                                <button type="button" class="sidebut" id="volume2">Volume</button>
+                        </div>
+                        <div id="innermetricfirst">
+                                <section id="temp2code">
+                                        <h3>Calcius to Farenheit</h3>
+                                        <p>Type a temperature in the Celcius field to convert it to Farenheit:</p>
+                                        <p>
+                                                <label>Celcius</label>
+                                                <input id="inputCelcius" type="number"
+                                                        oninput="temperatureConverter2(this.value)">
+                                        </p>
+                                        <p>Your temperature in Farenheit is: <span id="outputFarenheit"></span></p>
+
+                                        <script>
+                                                // This script converts the temp from C to F.
+                                                function temperatureConverter2(valNum) {
+                                                        valNum = parseFloat(valNum * 1.8 + 32);
+                                                        document.getElementById("outputFarenheit").innerHTML = (valNum).toFixed(1);
+                                                }
+                                        </script>
+                                </section>
+                                <section id="area2code">
+
+                                        <h3>Square Meters to Square Feet</h3>
+                                        <p>Calculate how many square feet are in a given number of square meters:</p>
+                                        <p>
+                                                <label>Square Meters</label>
+                                                <input id="inputsquaremet" type="number"
+                                                        oninput="area2Converter1(this.value)">
+                                        </p>
+                                        <p>The total number of square feet is: <span id="outputsquarefeet"></span></p>
+
+                                        <script>
+                                                // This script converts square meters into square feet.
+                                                function area2Converter1(valNum) {
+                                                        valNum = parseFloat(valNum * 10.7639);
+                                                        document.getElementById("outputsquarefeet").innerHTML = (valNum).toFixed(1);
+                                                }
+
+                                        </script>
+
+                                        <h3>Square Kilometers to Square Miles</h3>
+                                        <p>Calculate how many square miles are in a given number of square
+                                                kilometers:</p>
+                                        <p>
+                                                <label>Square Kilometers</label>
+                                                <input id="inputsquarekms" type="number"
+                                                        oninput="area2Converter2(this.value)">
+                                        </p>
+                                        <p>The total number of square miles is: <span id="outputsquaremiles"></span></p>
+
+                                        <script>
+                                                // This script converts square kilometers into square miles.
+                                                function area2Converter2(valNum) {
+                                                        valNum = parseFloat(valNum * 0.386102);
+                                                        document.getElementById("outputsquaremiles").innerHTML = (valNum).toFixed(1);
+                                                }
+                                        </script>
+
+                                        <h3>Hectares to Acres</h3>
+                                        <p>Calculate how many acres are in a given number of hectares:</p>
+                                        <p>
+                                                <label>Hectares</label>
+                                                <input id="inputhectares" type="number"
+                                                        oninput="area2Converter3(this.value)">
+                                        </p>
+                                        <p>The total number of acres is: <span id="outputacres"></span></p>
+
+                                        <script>
+                                                // This script converts hectares into acres.
+                                                function area2Converter3(valNum) {
+                                                        valNum = parseFloat(valNum * 2.47105);
+                                                        document.getElementById("outputacres").innerHTML = (valNum).toFixed(2);
+                                                }
+                                        </script>
+
+                                </section>
+
+                                <section id="length2code">
+                                        <h3>Centimeters to Inches</h3>
+                                        <p>Calculate how many inches are in a given number of centimeters:</p>
+                                        <p>
+                                                <label>Centimeters</label>
+                                                <input id="inputcm" type="number"
+                                                        oninput="length2Converter1(this.value)">
+                                        </p>
+                                        <p>The total number of inches is: <span id="outputinches"></span></p>
+
+                                        <script>
+                                                // This script converts centimeters to inches.
+                                                function length2Converter1(valNum) {
+                                                        valNum = parseFloat(valNum * 0.393701);
+                                                        document.getElementById("outputinches").innerHTML = (valNum).toFixed(2);
+                                                }
+                                        </script>
+
+
+                                        <h3>Meters to Feet</h3>
+                                        <p>Calculate how many feet are in a given number of meters:</p>
+                                        <p>
+                                                <label>Meters</label>
+                                                <input id="inputmeters" type="number"
+                                                        oninput="length2Converter2(this.value)">
+                                        </p>
+                                        <p>The total number of feet is: <span id="outputfeet"></span></p>
+
+                                        <script>
+                                                // This script converts meters to feet.
+                                                function length2Converter2(valNum) {
+                                                        valNum = parseFloat(valNum * 3.28084);
+                                                        document.getElementById("outputfeet").innerHTML = (valNum).toFixed(2);
+                                                }
+                                        </script>
+
+
+                                        <h3>Kilometers to Miles</h3>
+                                        <p>Calculate how many miles are in a given number of kilometers:</p>
+                                        <p>
+                                                <label>Kilometers</label>
+                                                <input id="inputkms" type="number"
+                                                        oninput="length2Converter3(this.value)">
+                                        </p>
+                                        <p>The total number of miles is: <span id="outputmiles"></span></p>
+
+                                        <script>
+                                                // This script converts kilometers to miles.
+                                                function length2Converter3(valNum) {
+                                                        valNum = parseFloat(valNum * 0.621371);
+                                                        document.getElementById("outputmiles").innerHTML = (valNum).toFixed(2);
+                                                }
+                                        </script>
+                                </section>
+                                <section id="weight2code">
+                                        <h3>Grams to Ounces</h3>
+                                        <p>Calculate how many ounces are in a given number of grams:</p>
+                                        <p>
+                                                <label>Grams</label>
+                                                <input id="inputgrams" type="number"
+                                                        oninput="weight2Converter1(this.value)">
+                                        </p>
+                                        <p>The total number of ounces is: <span id="outputounces"></span></p>
+
+                                        <script>
+                                                // This script converts grams into ounces.
+                                                function weight2Converter1(valNum) {
+                                                        valNum = parseFloat(valNum * 0.035274);
+                                                        document.getElementById("outputounces").innerHTML = (valNum).toFixed(1);
+                                                }
+                                        </script>
+
+                                        <h3>Kilograms to Pounds</h3>
+                                        <p>Calculate how many pounds are in a given number of kilograms:
+                                        </p>
+                                        <p>
+                                                <label>Kilograms</label>
+                                                <input id="inputkilograms" type="number"
+                                                        oninput="weight2Converter2(this.value)">
+                                        </p>
+                                        <p>The total number of pounds is: <span id="outputpounds"></span>
+                                        </p>
+
+                                        <script>
+                                                // This script converts kilograms into pounds.
+                                                function weight2Converter2(valNum) {
+                                                        valNum = parseFloat(valNum * 2.20462);
+                                                        document.getElementById("outputpounds").innerHTML = (valNum).toFixed(2);
+                                                }
+                                        </script>
+                                </section>
+                                <section id="volume2code">
+                                        <h3>Milliliters to Fluid Ounces</h3>
+                                        <p>Calculate how many fluid ounces are in a given number of milliliters:</p>
+                                        <p>
+                                                <label>Milliliters</label>
+                                                <input id="inputmls" type="number"
+                                                        oninput="volume2Converter1(this.value)">
+                                        </p>
+                                        <p>The total number of fluid ounces is: <span id="outputfloz"></span></p>
+
+                                        <script>
+                                                // This script converts milliliters into fluid ounces.
+                                                function volume2Converter1(valNum) {
+                                                        valNum = parseFloat(valNum * 0.033814);
+                                                        document.getElementById("outputfloz").innerHTML = (valNum).toFixed(1);
+                                                }
+                                        </script>
+
+                                        <h3>Liters to Gallons</h3>
+                                        <p>Calculate how many gallons are in a given number of liters:</p>
+                                        <p>
+                                                <label>Liters</label>
+                                                <input id="inputliters" type="number"
+                                                        oninput="volume2Converter2(this.value)">
+                                        </p>
+                                        <p>The total number of gallons is: <span id="outputgallons"></span></p>
+
+                                        <script>
+                                                // This script converts liters into gallons.
+                                                function volume2Converter2(valNum) {
+                                                        valNum = parseFloat(valNum * 0.264172);
+                                                        document.getElementById("outputgallons").innerHTML = (valNum).toFixed(2);
+                                                }
+                                        </script>
+                                </section>
+                        </div>
+        </section>
+        <script>
+
+                // These buttons toggle whether the units converted from will be English or Metric.
+
+                document.querySelector("#conetom").addEventListener("click", function () {
+                        document.querySelector("#englishfirst").style.display = "block";
+                        document.querySelector("#metricfirst").style.display = "none";
+                        document.querySelector("#innerenglishfirst").style.display = "none";
+
+                });
+
+                document.querySelector("#conmtoe").addEventListener("click", function () {
+                        document.querySelector("#englishfirst").style.display = "none";
+                        document.querySelector("#metricfirst").style.display = "block";
+                        document.querySelector("#innermetricfirst").style.display = "none";
+                });
+
+                // These buttons toggle different types of English units which can be converted to Metric units.
+
+                document.querySelector("#temp1").addEventListener("click", function () {
+                        document.querySelector("#innerenglishfirst").style.display = "block";
+                        document.querySelector("#temp1code").style.display = "block";
+                        document.querySelector("#area1code").style.display = "none";
+                        document.querySelector("#length1code").style.display = "none";
+                        document.querySelector("#weight1code").style.display = "none";
+                        document.querySelector("#volume1code").style.display = "none";
+                });
+
+                document.querySelector("#area1").addEventListener("click", function () {
+                        document.querySelector("#innerenglishfirst").style.display = "block";
+                        document.querySelector("#temp1code").style.display = "none";
+                        document.querySelector("#area1code").style.display = "block";
+                        document.querySelector("#length1code").style.display = "none";
+                        document.querySelector("#weight1code").style.display = "none";
+                        document.querySelector("#volume1code").style.display = "none";
+                });
+
+                document.querySelector("#length1").addEventListener("click", function () {
+                        document.querySelector("#innerenglishfirst").style.display = "block";
+                        document.querySelector("#temp1code").style.display = "none";
+                        document.querySelector("#area1code").style.display = "none";
+                        document.querySelector("#length1code").style.display = "block";
+                        document.querySelector("#weight1code").style.display = "none";
+                        document.querySelector("#volume1code").style.display = "none";
+                });
+
+                document.querySelector("#weight1").addEventListener("click", function () {
+                        document.querySelector("#innerenglishfirst").style.display = "block";
+                        document.querySelector("#temp1code").style.display = "none";
+                        document.querySelector("#area1code").style.display = "none";
+                        document.querySelector("#length1code").style.display = "none";
+                        document.querySelector("#weight1code").style.display = "block";
+                        document.querySelector("#volume1code").style.display = "none";
+                });
+
+                document.querySelector("#volume1").addEventListener("click", function () {
+                        document.querySelector("#innerenglishfirst").style.display = "block";
+                        document.querySelector("#temp1code").style.display = "none";
+                        document.querySelector("#area1code").style.display = "none";
+                        document.querySelector("#length1code").style.display = "none";
+                        document.querySelector("#weight1code").style.display = "none";
+                        document.querySelector("#volume1code").style.display = "block";
+                });
+
+                // These buttons toggle different types of Metric units that can be converted to English Units.
+
+                document.querySelector("#temp2").addEventListener("click", function () {
+                        document.querySelector("#innermetricfirst").style.display = "block";
+                        document.querySelector("#temp2code").style.display = "block";
+                        document.querySelector("#area2code").style.display = "none";
+                        document.querySelector("#length2code").style.display = "none";
+                        document.querySelector("#weight2code").style.display = "none";
+                        document.querySelector("#volume2code").style.display = "none";
+                });
+
+                document.querySelector("#area2").addEventListener("click", function () {
+                        document.querySelector("#innermetricfirst").style.display = "block";
+                        document.querySelector("#temp2code").style.display = "none";
+                        document.querySelector("#area2code").style.display = "block";
+                        document.querySelector("#length2code").style.display = "none";
+                        document.querySelector("#weight2code").style.display = "none";
+                        document.querySelector("#volume2code").style.display = "none";
+                });
+
+                document.querySelector("#length2").addEventListener("click", function () {
+                        document.querySelector("#innermetricfirst").style.display = "block";
+                        document.querySelector("#temp2code").style.display = "none";
+                        document.querySelector("#area2code").style.display = "none";
+                        document.querySelector("#length2code").style.display = "block";
+                        document.querySelector("#weight2code").style.display = "none";
+                        document.querySelector("#volume2code").style.display = "none";
+                });
+
+                document.querySelector("#weight2").addEventListener("click", function () {
+                        document.querySelector("#innermetricfirst").style.display = "block";
+                        document.querySelector("#temp2code").style.display = "none";
+                        document.querySelector("#area2code").style.display = "none";
+                        document.querySelector("#length2code").style.display = "none";
+                        document.querySelector("#weight2code").style.display = "block";
+                        document.querySelector("#volume2code").style.display = "none";
+                });
+
+                document.querySelector("#volume2").addEventListener("click", function () {
+                        document.querySelector("#innermetricfirst").style.display = "block";
+                        document.querySelector("#temp2code").style.display = "none";
+                        document.querySelector("#area2code").style.display = "none";
+                        document.querySelector("#length2code").style.display = "none";
+                        document.querySelector("#weight2code").style.display = "none";
+                        document.querySelector("#volume2code").style.display = "block";
+                });
+        </script>
+</body>
+<footer>©2022 Andrew Brown</footer>
+
+</html>
